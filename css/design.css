@@ -672,12 +672,13 @@ form.hello_form {
 .form_group label {
 	color: #636161;
 	font-family: Inter;
-	font-size: 1.3125em;
+	font-size: 0.65125em;
 	font-style: normal;
 	font-weight: 300;
 	line-height: normal;
 }
-
+.form_group input{height:33px;margin-left:-2px; margin-top:10px; border-radius:2px;}
+.form_group textarea{ background:#D6D6EC !important;}
 /**/
 
 /*from FIGMA */
