@@ -342,7 +342,7 @@ section {
 
 .contact form input:focus,
 .contact form textarea:focus {
-	border-color: var(--primary-color);
+	border-color: var(--secondary-color);
 	outline: none;
 }
 
