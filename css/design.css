@@ -657,6 +657,27 @@ div.bb {
 	width: auto !important;
 }
 
+form.hello_form {
+	background: #D6D6EC !important;
+	opacity: 0.97;
+	filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+.form_group {
+	background: #D6D6EC !important;
+	opacity: 0.97;
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25));
+}
+
+.form_group label {
+	color: #636161;
+	font-family: Inter;
+	font-size: 1.3125em;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+}
+
 /**/
 
 /*from FIGMA */
