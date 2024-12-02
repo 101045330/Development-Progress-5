@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
 
-  <title> One out of a million portfolio website !!</title>
+  <title> Blogging exciting flights . . .</title>
 
-  <meta name="keywords" content="Min G, web, portfolio">
-  <meta name="description" content="Portfolio website design by MIN G. ">
+  <meta name="keywords" content="min, web, blog, flight, simulator">
+  <meta name="description" content="Blog website design by MIN G. ">
   <meta name="author" content="101045330@georgebrown.ca">
 
   <!-- favicon added here-->
@@ -17,21 +17,23 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <!-- reset, accessibility and haptic order -->
+
   <link rel="stylesheet" href="css/reset.css" media="all">
   <link rel="stylesheet" href="css/accessibility.css" media="all">
   <link rel="stylesheet" href="css/z-index.css" media="screen">
-  <!-- layout and design --> 
   <link rel="stylesheet" href="css/layout-grid2.css" media="screen">
   <link rel="stylesheet" href="css/design.css" media="screen">
-  <!-- extra decoration -->
+
   <link rel="stylesheet" href="css/animate2.css" media="screen">
   <link rel="stylesheet" href="css/sprite.css" media="screen">
   <link rel="stylesheet" href="css/typography.css" media="screen">
+  <!--figma color import-->
+  <link rel="stylesheet" href="css/designParams.css" media="screen">
 
 </head>
 
 <body class="inter-font">
+
 
   <header>
 
@@ -57,8 +59,8 @@
         </li>
 
         <li>
-		  <a href="services.html">
-          <!--a href="#most_viewed"-->
+          <a href="services.html">
+            <!--a href="#most_viewed"-->
             Services &nbsp;
           </a>
         </li>
@@ -74,58 +76,64 @@
 
   </header>
 
+
   <main id="main">
 
-	 <section style="margin-top:1.5em;">
-		<form method="post" name="ai_query_form"  class="block  fRow  fSpaceAround">
-			
-			<hgroup class="block fRow fStart">
-			
-				<h3  class=" fCol block " >
-					<a href="index.html">
-					<!--<img src="icon-home.png" alt="Icon1" />-->
-					<small>Home</small> &gt; &nbsp;
-					</a>
-				</h3>
-			
-				<h1 class="fCol block"> Hi, Let me help you with a smile! </h1>
-			<hgroup>
-			
-			<div  class=" fRow fEnd" style="background-color:navy;padding:.1em;border-radius:2px;">
-				<input class="fCol fEnd" type="text" name="ai_query" size="5"  style="background:  white; color:blue;">
-				<button class="fCol fEnd bold"> Bing Out ! </button>
-			</div>
 
-		</form>
-	</section> 
+    <section id="ai_query_section">
 
-	  
-	  
-	  <section style="margin-top:1.5em;" id="">
-  <!--article BEGINS-->
+      <form id="ai_query_form" method="post" name="ai_query_form" class=" block fRow fSpaceAround">
 
-      <article class="articles bb">
+        <div id="breadcrumb" class="fCol fWrapWrap">
+          <h3 class="">
+            <a href="index.html">
+              <!--<img src="icon-home.png" alt="Icon1" />-->
+              <small>Home</small> &gt; &nbsp;
+            </a>
+          </h3>
+        </div>
+
+        <div id="heading_h1" class="fCol fWrapWrap">
+          <h1> Hi, Let me help you with a smile! </h1>
+        </div>
+
+        <div id="bing_out" class="fCol fWrapWrap" id="hform"
+          style="background-color:navy;padding:.1em;border-radius:2px;">
+          <input class="fCol fEnd" type="text" name="ai_query" size="5" style="background:  white; color:blue;">
+          <button class="fCol fEnd bold"> Bing Out ! </button>
+        </div>
+
+      </form>
+    </section>
 
 
-        <div class="container">
+    <section id="article_section">
+      <!--article BEGINS-->
 
-          <figure class="pad10">
+      <article class="articles bb ">
+
+        <div class="container ">
+
+          <figure class="pad10-00000">
             <img src="png/no-image.png" alt="Image 1" class="profile-pic">
             <figcaption></figcaption>
           </figure>
 
-          <div>
-		     
-            <p class="content">
-			
-			Let’s transform work with  Necessity driven design and optimization 
+          <div class="purpleBox ">
 
-			Welcome to my personal website where every visitor smiles with a gaze at an interesting 
-			offer to collaborate and discover how profitable necessity driven design, automation 
-			and marketing is going to be . . . 
-			  
+            <h2 class="purpleBoxHeading">
+              Let’s transform work with Necessity driven design ...
+            </h2>
+
+            <p class="content trimmed-paragraph purpleBoxText">
+
+              Welcome to my personal website where every visitor smiles with a gaze at an interesting
+              offer to collaborate and discover how profitable necessity driven design, automation
+              and marketing is going to be . . .
+
             </p>
-            <a href="display.html?id=2" class="asBlock">Continue Reading <b>&rarr;</b></a>
+
+            <a href="display.html?id=2" class="asBlock floatR">Collaborate</a>
 
           </div>
           <!--div.asBlock-->
@@ -133,90 +141,93 @@
       </article>
 
       <!-- article ENDS-->
-	</section>
-	  
-<!--inserted-->
-	 <section style="margin-top:1.5em;">
-	 
-		<article class="articles aa fRow fStart">
-		
-            <ul id="slider_link" class="fCol links">
-               
-			   <li class="lists">
-                    <img src="1.jpg" alt="" class="icons">
-                    <a href="#" class="anchor">AI Marketing</a>
-                </li>
-                
-				<li class="lists">
-                    <img src="2.jpg" alt="" class="icons">
-                    <a href="#" class="anchor">Designs for Web</a>
-                </li>
-                
-				<li class="lists">
-                    <img src="3.jpg" alt="" class="icons">
-                    <a href="#" class="anchor">Scripting &amp; Animation</a>
-                </li>
-               
-			   <li class="lists">
-                    <img src="4.jpg" alt="" class="icons">
-                    <a href="#">Training &amp; Development</a>
-                </li>
-               
-			   <li class="lists">
-                    <img src="" alt="" class="icons">
-                    <a href="#" class="anchor">Anti Spywares</a>
-                </li>
-				
-            </ul>
-
-            <picture id="product-image" class="fCol ">
-				
-                <img src="https://via.placeholder.com/100x75" alt="Slider Image 1" 
-					class="slides" id="productImage">
-              
-            </picture>
-			
-		</article>
     </section>
-<!--inserted ends -->	  
 
- 	  
-	  <section style="margin-top:1.5em;" id="about">
-  <!--article BEGINS-->
+
+    <!--slider-->
+    <section id="slider_section" class="slider">
+
+      <article class="articles  fRow fStart">
+
+        <ul id="slider_link" class="fCol links">
+
+          <li class="lists">
+            <img src="1.jpg" alt="" class="icons">
+            <a href="#" class="anchor">AI Marketing</a>
+          </li>
+
+          <li class="lists">
+            <img src="2.jpg" alt="" class="icons">
+            <a href="#" class="anchor">Designs for Web</a>
+          </li>
+
+          <li class="lists">
+            <img src="3.jpg" alt="" class="icons">
+            <a href="#" class="anchor">Scripting &amp; Animation</a>
+          </li>
+
+          <li class="lists">
+            <img src="4.jpg" alt="" class="icons">
+            <a href="#">Training &amp; Development</a>
+          </li>
+
+          <li class="lists">
+            <img src="" alt="" class="icons">
+            <a href="#" class="anchor">Anti Spywares</a>
+          </li>
+
+        </ul>
+
+        <picture id="product-image" class="fCol ">
+
+          <img src="jpg/photo9.jpg" alt="Slider Image 1" class="slides" id="productImage">
+
+        </picture>
+
+      </article>
+    </section>
+    <!--slider ends -->
+
+    <section id="about">
+      <!--article BEGINS-->
 
       <article class="articles bb">
 
 
         <div class="container">
 
+
           <figure class="pad10">
             <img src="png/no-image.png" alt="Image 1" class="profile-pic">
             <figcaption></figcaption>
           </figure>
 
-          <div>
-		     <h2>
-				<a href="display.html?id=2">Automate Digital Business, TODAY ! </a>
-			 </h2>
-			 
-            <p class="content">
-			
-              Transform your marketing strategy with cutting-edge automation service at affordable rates! 
-			  Harness the power of Google, Facebook and Bing Analytics to gain valuable insights 
-			  and inform the content generated by ChatGPT. 
-			  
-			  Enhance your campaigns with 
-			  stunning visuals created by MidJourney, ensuring your marketing 
-			  materials are both data-driven and visually captivating. 
-			  
-			  Continuously monitor and optimize your content’s performance using 
-			  Google and Bing Analytics to achieve outstanding results. 
-			  Let us streamline your content creation process and elevate your 
-			  brand’s presence effortlessly. ...
-			  
+
+          <div class=" grayBox">
+            <h2 class="purpleBoxHeading">
+              <!--a href="display.html?id=2" class=""-->
+              Automate Digital Business, TODAY !
+              <!--/a-->
+            </h2>
+
+            <p class="content trimmed-paragraph">
+
+              Transform your marketing strategy with cutting-edge automation service at affordable rates!
+              Harness the power of Google, Facebook and Bing Analytics to gain valuable insights
+              and inform the content generated by ChatGPT.
+
+              Enhance your campaigns with
+              stunning visuals created by MidJourney, ensuring your marketing
+              materials are both data-driven and visually captivating.
+
+              Continuously monitor and optimize your content’s performance using
+              Google and Bing Analytics to achieve outstanding results.
+              Let us streamline your content creation process and elevate your
+              brand’s presence effortlessly. ...
+
             </p>
-			
-            <a href="display.html?id=2" class="asBlock">Continue Reading <b>&rarr;</b></a>
+
+            <a href="display.html?id=2" class="asBlock floatR"> Continue Reading </a>
 
           </div>
           <!--div.asBlock-->
@@ -224,139 +235,124 @@
       </article>
 
       <!-- article ENDS-->
-	</section>
-	     
-		 
+    </section>
 
-	<section class="fRow fCenter logo-track">
-		<figure class="fCol">
-			<figcaption>HTML</figcaption>
 
-			<img class="images" src="https://via.placeholder.com/100x75" alt="HTML Icon">
-		</figure>
-		<figure class="fCol">
-			<img src="https://via.placeholder.com/100x75" alt="React Icon">
-			<figcaption>React</figcaption>
-		</figure>
-		<figure class="fCol">
-			<figcaption>CSS</figcaption>
-			<img src="https://via.placeholder.com/100x75" alt="CSS Icon">
-		</figure>
-		<figure class="fCol">
-			<img src="https://via.placeholder.com/100x75" alt="Figma Icon">
-			<figcaption>Figma</figcaption>
-		</figure>
-		<figure class="fCol">
-			<figcaption>JavaScript</figcaption>
-			<img src="https://via.placeholder.com/100x75" alt="JavaScript Icon">
-		</figure>
-		<figure class="fCol">
-			<img src="https://via.placeholder.com/100x75" alt="TypeScript Icon">
-			<figcaption>TypeScript</figcaption>
-		</figure>
-	</section>
-		 
+    <section class="fRow fCenter logo-track">
+      <figure class="fCol">
+        <figcaption>HTML</figcaption>
 
- <section id="formSection" class="aa">
- 
-            <form class="block bb">
-			
-                <fieldset>
-				
-                    <legend>Contact Form</legend>
+        <img class="images" src="https://via.placeholder.com/100x75" alt="HTML Icon">
+      </figure>
+      <figure class="fCol">
+        <img src="https://via.placeholder.com/100x75" alt="React Icon">
+        <figcaption>React</figcaption>
+      </figure>
+      <figure class="fCol">
+        <figcaption>CSS</figcaption>
+        <img src="https://via.placeholder.com/100x75" alt="CSS Icon">
+      </figure>
+      <figure class="fCol">
+        <img src="https://via.placeholder.com/100x75" alt="Figma Icon">
+        <figcaption>Figma</figcaption>
+      </figure>
+      <figure class="fCol">
+        <figcaption>JavaScript</figcaption>
+        <img src="https://via.placeholder.com/100x75" alt="JavaScript Icon">
+      </figure>
+      <figure class="fCol">
+        <img src="https://via.placeholder.com/100x75" alt="TypeScript Icon">
+        <figcaption>TypeScript</figcaption>
+      </figure>
+    </section>
 
-                    <div class="fRow bb form_group" >
-                        <label for="first_name">First Name
-                            <input type="text" name="first_name" id="first_name" required>
-                        </label>
 
-                        <label for="last_name">Last Name
-                            <input type="text" name="last_name" id="last_name" required>
-                        </label>
-                    </div>
+    <section id="formSection" class="aa">
 
-                    <div class="fRow aa form_group">
-                        <label for="message">Message
-                            <input type="text" name="message" id="message" required>
-                        </label>
-                    </div>
 
-                    <div class="fRow bb form_group">
-                        <label for="details">Additional Details
-                            <textarea rows="3" cols="25" id="details" required></textarea>
-                        </label>
-                    </div>
+      <form class="block bb hello_form">
 
-                    <div class="fRow aa form_group">
-                        <input type="checkbox" name="agree" id="agree" checked >
-                        <label for="agree">I agree to the terms</label>
-                    </div>
+        <fieldset>
 
-                    <div class="fRow bb form_group">
-                        <button type="submit">Send</button>
-                    </div>
-                </fieldset>
-            </form>
-			
-			<article class="block aa">
-				<br>
-				<div>
-					<h2> Lets grow together</h2>
-					
-					<p>
-						Please select a topic below related to your inquiry. 
-						<br>
-						If you dont find what you need, fill out the form:
-					</p>
-				</div>
-				
-				<div>
-					<h3><a href="#"> Book a demo </a></h3>
-					<p>
-						 Live in person demo to clear confusion 
-					</p>
-				</div>
-				
-				<div>
-					<h3> <a href="#"> Order here </a></h3>
-					<p>	
-						Order available services if you liked the demo 
-					</p>
-				</div>
+          <legend>Contact Form</legend>
 
-				<div>
-					<h3> <a href="#"> Lets Collaborate </a> </h3>
-					<p>
-						
-							
-						
-						Please share requirements for collaboration 	
-					</p>
-				</div>
-				
-			</article>
-			
-        </section>
+          <div class="fRow bb form_group">
+            <label for="first_name">First Name
+              <input type="text" name="first_name" id="first_name" required>
+            </label>
 
-		 
-	<section>
-      <!-- next prev begins
-      <button class="prev">Next</button>
-      <button class="next"> 5 </button>
-      <button class="next"> 4 </button>
-      <button class="next"> 3 </button>
-      <button class="next"> 2 </button>
-      <button class="next"> 1 </button>
-      <button class="next aaaa">Previous</button>
+            <label for="last_name">Last Name
+              <input type="text" name="last_name" id="last_name" required>
+            </label>
+          </div>
 
-      <-- next prev ends-->
+          <div class="fRow aa form_group">
+            <label for="message">Topic
+              <input type="text" name="message" id="message" required>
+            </label>
+          </div>
+
+          <div class="fRow bb form_group">
+            <label for="details"> Details
+              <textarea rows="3" cols="25" id="details" required></textarea>
+            </label>
+          </div>
+
+          <div class="fRow aa form_group">
+            <input type="checkbox" name="agree" id="agree" checked>
+            <label for="agree">I agree to the terms</label>
+          </div>
+
+          <div class="fRow bb form_group">
+            <button type="submit">Send</button>
+          </div>
+        </fieldset>
+      </form>
+
+
+      <article class="block aa information">
+        <br>
+        <div>
+          <h2> Lets grow together</h2>
+
+          <p>
+            Please select a topic below related to your inquiry.
+            <br>
+            If you dont find what you need, fill out the form:
+          </p>
+        </div>
+
+        <div>
+          <h3><a href="#"> Book a demo </a></h3>
+          <p>
+            Live in person demo to clear confusion
+          </p>
+        </div>
+
+        <div>
+          <h3> <a href="#"> Order here </a></h3>
+          <p>
+            Order available services if you liked the demo
+          </p>
+        </div>
+
+        <div>
+          <h3> <a href="#"> Lets Collaborate </a> </h3>
+          <p>
+            Please share requirements for collaboration
+          </p>
+        </div>
+
+      </article>
+
 
     </section>
+
 
   </main>
 
   <footer>
-	
+
     <p class="block fRow fCenter">
       <small> &copy; Some rights preserved. <b> MIN G. &nbsp; </b> </small>
     </p>
@@ -368,92 +364,45 @@
       <li class="spotify gradient-hover"> <a href="https://www.spotify.com"> Spotify </a> </li>
       <li class="linkedin gradient-hover"> <a href="https://www.linkedin.com"> LinkedIn </a> </li>
     </ul>
-	
-    <ul class="fRow fCenter ">
+
+    <ul id="footer_links" class="fRow fCenter ">
       <li class="fCol fCenter"> <a href="https://www.index.html?id=10"> Privacy Policy </a> </li>
       <li class="fCol fCenter"> <a href="https://www.index.html?id=11"> Cookie Setting </a> </li>
       <li class="fCol fCenter"> <a href="https://www.index.html?id=12"> Accessibility </a> </li>
       <li class="fCol fCenter"> <a href="https://www.index.html?id=13"> Refund Policy </a> </li>
       <li class="fCol fCenter"> <a href="https://www.index.html?id=14"> Help </a> </li>
-    </ul>		
+      <li class="fCol fCenter"> <a href="https://www.index.html?id=15"> Feed </a> </li>
 
+    </ul>
 
   </footer>
 
+
+  <script src="js/snippets.js"></script>
+  <script src="js/slider.js"></script>
+  <script> startBlinking(); </script>
+
   <!-- loading print media css after all content and design -->
-  <link rel="stylesheet" href="css/print.css" media="print" >
- <style>
- 
- </style>
-<script>
- const links = document.querySelectorAll('.links li.lists a.anchor');
+  <link rel="stylesheet" href="css/print.css" media="print">
 
-        const productImage = document.getElementById('productImage');
-        const images = [
-            'product-image1.jpg',
-            'product-image2.jpg',
-            'product-image3.jpg',
-            'product-image4.jpg',
-            'product-image5.jpg'
-        ];
 
-        let currentIndex = 0;
+  <script>
 
-        function changeImage(index) {
-            productImage.src = images[index];
-        }
+    document.addEventListener('DOMContentLoaded', function () {
+      const container = document.getElementById('product-image');
+      const img = container.querySelector('img');
 
-        links.forEach(
-			(link, index) => {
-				link.addEventListener(
-					'click', (e) => {
-						e.preventDefault();
-						currentIndex = index;
-						changeImage(currentIndex);
-				});
-        });
+      function adjustImageSize() {
+        const containerWidth = container.offsetWidth;
+        img.style.width = `${containerWidth}px`;
+      }
 
-        // Optional: Auto-slide functionality
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            changeImage(currentIndex);
-        }, 3000);
+      // Adjust image size on load and on window resize
+      adjustImageSize();
+      window.addEventListener('resize', adjustImageSize);
+    });
+  </script>
 
-</script>
-
-<script>
-        const logos = document.querySelectorAll('.logo-track img');
-         currentIndex = 0;
-
-        function showLogo(index) {
-            logos.forEach((logo, i) => {
-                if (i === index) {
-                    logo.classList.add('active');
-                } else {
-                    logo.classList.remove('active');
-                }
-            });
-        }
-
-        function startBlinking() {
-            showLogo(currentIndex);
-            currentIndex = (currentIndex + 1) % logos.length;
-            setTimeout(startBlinking, 1000);
-        }
-
-        logos.forEach(logo => {
-            logo.addEventListener('mouseover', () => {
-                logo.style.transform = 'scale(1.5)';
-            });
-
-            logo.addEventListener('mouseout', () => {
-                logo.style.transform = 'scale(1)';
-            });
-        });
-
-        startBlinking();
-
-</script>
 </body>
 
 </html>
