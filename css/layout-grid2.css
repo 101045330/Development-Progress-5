@@ -15,6 +15,7 @@ section.projects {
     display: grid;
     gap: 1em;
 }
+
 section#formSection{
 	margin-top:1.5em;
 	display:grid;
@@ -120,10 +121,27 @@ article{ flex : 1 3 }*/
         width: 100% !important;
         height: auto;
     }
+
     form * {
         width: 95%;
         margin-left: .85em;
-    }
+    }	
+    section#formSection{
+		grid-template-columns: 1fr;	
+	}
+
+	/*section#ai_query_section{ display:grid; grid-template-columns: 1fr;	}*/
+	
+	section#formSection form, 
+	section#formSection article{ flex-direction:row !important; padding:1em;} 
+	
+	form#ai_query_form div{ flex-direction:row !important; }
+	
+	/*hgroup > div{ flex-direction:row; }*/
+}	
+	
+@media only screen and (max-width: 480px) {
+	
 }
 
 .fBox{ 	display:flex; 
@@ -132,11 +150,12 @@ article{ flex : 1 3 }*/
 		justify-content:space-between;
 }
 
-/*
 
-display:flex; 					// display as flexible box
-flex-direction: row; 			// enjoy space - left to the right
-align-content: flex-start; 		// row level content alignment - starting point
-justify-content:space-between;	// column level content alignment - equal space between
-
-*/
+/*  
+  
+ display:flex; 					// display as flexible box
+ flex-direction: row; 			// enjoy space - left to the right
+ align-content: flex-start; 		// row level content alignment - from coordinate 0,0 i.e. top right
+ justify-content:space-between;	// column level content alignment - equal space in between
+  
+*/  
