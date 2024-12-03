@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
@@ -29,6 +30,7 @@
   <link rel="stylesheet" href="css/typography.css" media="screen">
   <!--figma color import-->
   <link rel="stylesheet" href="css/designParams.css" media="screen">
+  <script src="js/slider/jquery371.js"></script>
 
 </head>
 
@@ -79,7 +81,6 @@
 
   <main id="main">
 
-
     <section id="ai_query_section">
 
       <form id="ai_query_form" method="post" name="ai_query_form" class=" block fRow fSpaceAround">
@@ -97,13 +98,77 @@
           <h1> Hi, Let me help you with a smile! </h1>
         </div>
 
-        <div id="bing_out" class="fCol fWrapWrap" id="hform"
-          style="background-color:navy;padding:.1em;border-radius:2px;">
-          <input class="fCol fEnd" type="text" name="ai_query" size="5" style="background:  white; color:blue;">
+        <!--div id="bing_out" class="fCol fWrapWrap" id="hform">
+          <textarea rows="2" cols="25" class="fCol fEnd" type="text" name="ai_query" size="5" style="background:  white; border:1px solid royalblue ;"></textarea>
           <button class="fCol fEnd bold"> Bing Out ! </button>
+        </div-->
+
+        <div id="bing_out" style="overflow:scroll;">
+          <div class="chat-container">
+            <div class="message user-message" style="cursor:pointer;">
+              <img src="jpg/hand.jpg" style="width:100px; height:50px;"> TAP here for support.
+              <hr noshade="" size="1">
+              <div class="replied-text"></div>
+              <script>
+                // Create and append a button to the replied text
+                const repliedText = document.querySelector('.replied-text');
+                const button = document.createElement('button');
+                button.textContent = '';
+                button.className = 'clear-button';
+                repliedText.appendChild(button);
+
+                // Add event listener to the button
+                button.addEventListener('click', () => {
+                  // Delete the node with the 'bot-message' class
+                  document.querySelectorAll('.bot-message').forEach(element => {
+                    element.remove();
+                  });
+
+                  // Create and append a reply message
+                  const replyMessage = document.createElement('div');
+                  replyMessage.className = 'reply-message';
+                  replyMessage.textContent = 'Bot message deleted successfully!';
+                  repliedText.appendChild(replyMessage);
+                });
+              </script>
+            </div>
+
+
+          </div>
+
+          <script>
+            const chatContainer = document.querySelector('.chat-container');
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user-message');
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('message', 'bot-message');
+
+            const sendMessage = (message) => {
+              const newMessage = document.createElement('div');
+              newMessage.classList.add('message', 'bot-message');
+              newMessage.textContent = message;
+              chatContainer.appendChild(newMessage);
+            };
+
+            const askBing = (query) => {
+              // Placeholder for Bing Chat API call
+              const response = `The weather in Toronto is sunny and 34°C.`;
+              sendMessage(response);
+            };
+
+            document.querySelector('.chat-container').addEventListener('click', () => {
+              const userQuery = prompt('Ask me anything:');
+              askBing(userQuery);
+            });
+          </script>
         </div>
 
+
       </form>
+      <code>
+
+      </code>
+
     </section>
 
 
@@ -121,8 +186,9 @@
 
           <div class="purpleBox ">
 
-            <h2 class="purpleBoxHeading">
-              Let’s transform work with Necessity driven design ...
+            <h2 class="purpleBoxHeading tooltip">
+              Let’s transform work with Necessity driven design ..<span class="tooltiptext">.. and solve every problem
+                today rather than next year!</span>
             </h2>
 
             <p class="content trimmed-paragraph purpleBoxText">
@@ -133,7 +199,7 @@
 
             </p>
 
-            <a href="display.html?id=2" class="asBlock floatR">Collaborate</a>
+            <a href="display.html?id=2" class="asBlock floatR btnPad1L2T">Let's Collaborate</a>
 
           </div>
           <!--div.asBlock-->
@@ -145,48 +211,178 @@
 
 
     <!--slider-->
-    <section id="slider_section" class="slider">
+    <style>
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .links {
+          flex: 1;
+          min-width: 200px;
+      }
+      .carousel-demo {
+          flex: 3;
+          min-width: 300px;
+          position: relative;
+      }
+      .links ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      .links ul li a {
+          display: block;
+          padding: 10px;
+          background-color: #f0f0f0;
+          margin: 5px 0;
+          text-decoration: none;
+          color: #333;
+      }
+      .links ul li a:hover {
+          background-color: #ddd;
+      }
+      .info-box {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+      }
+      .info-box h3 {
+          margin: 0;
+          font-size: 1.2em;
+      }
+      .info-box p {
+          margin: 5px 0;
+      }
+      .info-box a {
+          color: #00f;
+          text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+          .links ul li a {
+              display: none;
+          }
+          .links ul li a.active {
+              display: block;
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              background-color: rgba(0, 0, 0, 0.7);
+              color: white;
+              padding: 10px;
+              border-radius: 5px;
+          }
+      }
+  </style>
 
-      <article class="articles  fRow fStart">
 
-        <ul id="slider_link" class="fCol links">
+    <section id="slider_section">
 
-          <li class="lists">
-            <img src="1.jpg" alt="" class="icons">
-            <a href="#" class="anchor">AI Marketing</a>
-          </li>
+      <div class="container">
+        <div class="links">
+          <ul>
+            <li><a href="#" data-slide="0">Slide 1</a></li>
+            <li><a href="#" data-slide="1">Slide 2</a></li>
+            <li><a href="#" data-slide="2">Slide 3</a></li>
+            <li><a href="#" data-slide="3">Slide 4</a></li>
+            <li><a href="#" data-slide="4">Slide 5</a></li>
+            <li><a href="#" data-slide="5">Slide 6</a></li>
+            <li><a href="#" data-slide="6">Slide 7</a></li>
+          </ul>
+        </div>
+        <div class="carousel-demo"></div>
+      </div>
 
-          <li class="lists">
-            <img src="2.jpg" alt="" class="icons">
-            <a href="#" class="anchor">Designs for Web</a>
-          </li>
+      <script src="js/slider/jquery371.js"></script>
+      <script src="js/slider/jR3DCarousel.js"></script>
+      <script>
+        $(document).ready(function() {
+            // Create an array of images for the carousel
+            var slides = [
+                {src: 'https://unsplash.it/750/350?image=839', title: 'Slide 1', description: 'This is a description for slide 1.'},
+                {src: 'https://unsplash.it/750/350?image=838', title: 'Slide 2', description: 'This is a description for slide 2.'},
+                {src: 'https://unsplash.it/750/350?image=837', title: 'Slide 3', description: 'This is a description for slide 3.'},
+                {src: 'https://unsplash.it/750/350?image=836', title: 'Slide 4', description: 'This is a description for slide 4.'},
+                {src: 'https://unsplash.it/750/350?image=832', title: 'Slide 5', description: 'This is a description for slide 5.'},
+                {src: 'https://unsplash.it/750/350?image=823', title: 'Slide 6', description: 'This is a description for slide 6.'},
+                {src: 'https://unsplash.it/750/350?image=822', title: 'Slide 7', description: 'This is a description for slide 7.'}
+            ];
 
-          <li class="lists">
-            <img src="3.jpg" alt="" class="icons">
-            <a href="#" class="anchor">Scripting &amp; Animation</a>
-          </li>
+            // Initialize the plugin and generate a 3D cube image carousel inside a specified container
+            var myCarousel = $('.carousel-demo').jR3DCarousel({
+                width: 750,
+                height: 350,
+                slides: slides,
+                animation: "slide3D",
+                autoplay: true,
+                animationInterval: 3000,
+                onSlideShow: function(slideIndex) {
+                    updateInfoBox(slideIndex);
+                    $('.links ul li a').removeClass('active');
+                    $('.links ul li a[data-slide="' + slideIndex + '"]').addClass('active');
+                }
+            });
 
-          <li class="lists">
-            <img src="4.jpg" alt="" class="icons">
-            <a href="#">Training &amp; Development</a>
-          </li>
+            // Navigate to the slide on link click
+            $('.links ul li a').on('click', function(e) {
+                e.preventDefault();
+                var slideIndex = $(this).data('slide');
+                myCarousel.showSlide(slideIndex);
+                updateInfoBox(slideIndex);
+            });
 
-          <li class="lists">
-            <img src="" alt="" class="icons">
-            <a href="#" class="anchor">Anti Spywares</a>
-          </li>
+            // Function to update the info box
+            function updateInfoBox(slideIndex) {
+                var slide = slides[slideIndex];
+                $('.info-box h3').text(slide.title);
+                $('.info-box p').text(slide.description);
+            }
 
-        </ul>
+            // Initialize the info box with the first slide's information
+            updateInfoBox(0);
+        });
+    </script>
 
-        <picture id="product-image" class="fCol ">
-
-          <img src="jpg/photo9.jpg" alt="Slider Image 1" class="slides" id="productImage">
-
-        </picture>
-
-      </article>
     </section>
+
     <!--slider ends -->
+
+    <!--slider script begins -->
+
+    <script src="js/slider/jR3DCarousel.js"></script>
+    <script>
+      // Create an array of images for the carousel
+      var slides = [
+        { src: 'https://unsplash.it/600/450?image=839' },
+        { src: 'https://unsplash.it/600/450?image=838' },
+        { src: 'https://unsplash.it/600/450?image=837' },
+        { src: 'https://unsplash.it/600/450?image=836' },
+        { src: 'https://unsplash.it/600/450?image=832' },
+        { src: 'https://unsplash.it/600/450?image=823' },
+        { src: 'https://unsplash.it/600/450?image=822' }
+      ];
+
+      // Initialize the plugin and generate a 3D cube image carousel inside a specified container
+      var myCarousel = $('.carousel-demo1').jR3DCarousel({
+        width: 600,
+        height: 450,
+        slides: slides,
+        animation: "slide3D",
+        autoplay: true,
+        animationInterval: 3000
+      });
+
+      // Navigate to the slide on link click or hover
+      $('ul#slider_link1 li.lists a.anchor').on('click hover', function (e) {
+        e.preventDefault();
+        var slideIndex = $(this).data('slide');
+        myCarousel.showSlide(slideIndex);
+      });
+    </script>
+
+    <!-- slider script ends -->
 
     <section id="about">
       <!--article BEGINS-->
@@ -379,7 +575,7 @@
 
 
   <script src="js/snippets.js"></script>
-  <script src="js/slider.js"></script>
+  <!--script src="js/slider.js"></script-->
   <script> startBlinking(); </script>
 
   <!-- loading print media css after all content and design -->
@@ -402,6 +598,7 @@
       window.addEventListener('resize', adjustImageSize);
     });
   </script>
+
 
 </body>
 
