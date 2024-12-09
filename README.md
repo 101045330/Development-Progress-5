@@ -1,11 +1,11 @@
 # Development Progress 5
 
 ## About this web project
-For detailed information about the design rationale behind this project, please refer to the Design Rationale document.pdf).
+For detailed information about the design rationale behind this project, please refer to the Design Rationale document below:
 https://github.com/101045330/Development-Progress-5/blob/main/Design%20Rationale%20(3).pdf (2)
 
 ## Home Page Design
-!Home Page Design
+
 https://github.com/101045330/Development-Progress-5/blob/main/01HOME.png
 *Home Page Design*
 
