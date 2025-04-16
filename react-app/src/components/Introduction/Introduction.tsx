@@ -1,13 +1,9 @@
-// AnyComponent.tsx
-import { useAppContext } from '../../contexts/AppContext';
+import React from 'react';
 
-const UserInfo = () => {
-  const { user, setUser } = useAppContext();
-
+const Introduction = () => {
   return (
-    <div>
-      <p>Welcome, {user || 'Guest'}!</p>
-      <button onClick={() => setUser('Alice')}>Set User</button>
-    </div>
+    <div>Search Component</div>
   );
 };
+
+export default Introduction;

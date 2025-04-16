@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-// Import necessary components and styles
+import React from 'react';
 
-const Testimonial: React.FC = () => {
+const Testimonial = () => {
   return (
-<p>About Page</p>
+    <div>Testimonial Component</div>
   );
 };
+
 export default Testimonial;
