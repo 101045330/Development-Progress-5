@@ -4,6 +4,26 @@ import Article from '../components/Article/Article';
 import Form1 from '../components/Forms/Form1/Form1';
 
 const ServicesPage: React.FC = () => {
+
+  const handleBookDemo = () => {
+    const formSection = document.getElementById("formSection");
+    formSection?.scrollIntoView({ behavior: "smooth" });
+  };
+  
+  const handleOrder = () => {
+    alert("Redirecting to the order form...");
+    // You can replace this with: window.location.href = "/order";
+  };
+  
+  const handleCollaborate = () => {
+    alert("Let's collaborate! Please fill out the form below.");
+    const formSection = document.getElementById("formSection");
+    formSection?.scrollIntoView({ behavior: "smooth" });
+  };
+  
+
+
+
   return (
     <Layout>
       <section>
@@ -69,15 +89,16 @@ const ServicesPage: React.FC = () => {
             </p>
           </div>
           <div>
-            <h3><a href="#">Book a demo</a></h3>
+            
+            <h3><button onClick={handleBookDemo}>Book a demo</button></h3>
             <p>Live in-person demo to clear confusion</p>
           </div>
           <div>
-            <h3><a href="#">Order here</a></h3>
+            <h3><a  onClick={handleOrder}>Order here</a></h3>
             <p>Order available services if you liked the demo</p>
           </div>
           <div>
-            <h3><a href="#">Let's Collaborate</a></h3>
+            <h3><a  onClick={handleCollaborate}>Let's Collaborate</a></h3>
             <p>Please share requirements for collaboration</p>
           </div>
         </article>
