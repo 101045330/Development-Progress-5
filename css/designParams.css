@@ -13,20 +13,17 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .background-image {
   width: 100%;
   height: auto;
-
   min-height: 100px;
   max-width: 100%;
-  /* Full viewport height */
-  background: url('../png/bg_service_icons.png') white;
+  background: url(../png/bg_service_icons.png) white;
   background-position: top;
   background-size: 100% auto;
-  /* Scale width to 100% and height auto */
   background-repeat: no-repeat;
-  display: flex;
+  display: flex
+;
   justify-content: center;
   align-items: center;
   padding: 0;
