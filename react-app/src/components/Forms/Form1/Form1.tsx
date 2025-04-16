@@ -9,8 +9,9 @@ const Form1: React.FC = () => {
     agree: false,
   });
 
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target;
+    const { name, value } = e.target;
 
     const isCheckbox = (el: EventTarget): el is HTMLInputElement =>
       (el as HTMLInputElement).type === 'checkbox';
@@ -20,7 +21,6 @@ const Form1: React.FC = () => {
       [name]: isCheckbox(e.target) ? (e.target as HTMLInputElement).checked : value,
     }));
   };
-
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

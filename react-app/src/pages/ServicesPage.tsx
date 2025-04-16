@@ -94,11 +94,11 @@ const ServicesPage: React.FC = () => {
             <p>Live in-person demo to clear confusion</p>
           </div>
           <div>
-            <h3><a  onClick={handleOrder}>Order here</a></h3>
+            <h3><button onClick={handleOrder} style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>Order here</button></h3>
             <p>Order available services if you liked the demo</p>
           </div>
           <div>
-            <h3><a  onClick={handleCollaborate}>Let's Collaborate</a></h3>
+            <h3><button onClick={handleCollaborate} style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>Let's Collaborate</button></h3>
             <p>Please share requirements for collaboration</p>
           </div>
         </article>

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 
 
 const AboutPage: React.FC = () => {
@@ -8,3 +7,4 @@ const AboutPage: React.FC = () => {
   );
 };
 export default AboutPage;
+

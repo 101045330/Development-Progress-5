@@ -66,15 +66,15 @@ const HelpDeskPage: React.FC = () => {
             </p>
           </div>
           <div>
-            <h3><a href="#">Book a demo</a></h3>
+            <h3><button onClick={() => alert('Book a demo clicked')} className="link-button">Book a demo</button></h3>
             <p>Live in-person demo to clear confusion</p>
           </div>
           <div>
-            <h3><a href="#">Order here</a></h3>
+            <h3><button onClick={() => alert('Order here clicked')} className="link-button">Order here</button></h3>
             <p>Order available services if you liked the demo</p>
           </div>
           <div>
-            <h3><a href="#">Let's Collaborate</a></h3>
+            <h3><button onClick={() => alert('Let\'s Collaborate clicked')} className="link-button">Let's Collaborate</button></h3>
             <p>Please share requirements for collaboration</p>
           </div>
         </article>
@@ -84,3 +84,4 @@ const HelpDeskPage: React.FC = () => {
 };
 
 export default HelpDeskPage;
+
